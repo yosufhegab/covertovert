@@ -2,17 +2,22 @@
   "covert_channel_code": "CSC-PSV-DNS-ZF",
   "send": {
     "parameters": {
-      "parameter1": "p1",
-      "parameter2": 1234,
-      "log_file_name": "Example_UDPTimingInterarrivalChannelSender.log"
+      "log_file_name": "Example_UDPTimingInterarrivalChannelSender.log",
+      "receiverIp": "172.17.0.3",
+      "pattern00": [1, 1, 0],
+      "pattern01": [1, 1, 1],
+      "pattern10": [1, 0, 0],
+      "pattern11": [0, 1, 0]
     }
   },
   "receive": {
     "parameters": {
-      "parameter1": "p1",
-      "parameter2": 1234,
-      "parameter3": "p3",
-      "log_file_name": "Example_UDPTimingInterarrivalChannelReceiver.log"
+      "log_file_name": "Example_UDPTimingInterarrivalChannelReceiver.log",
+      "pattern00": [1, 1, 0],
+      "pattern01": [1, 1, 1],
+      "pattern10": [1, 0, 0],
+      "pattern11": [0, 1, 0],
+      "should_stop": false
     }
   }
 }
